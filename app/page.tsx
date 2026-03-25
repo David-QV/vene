@@ -211,16 +211,15 @@ export default function HomePage() {
       {/* ══════════ SERVICES ══════════ */}
       <section className="section-light py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <AnimateOnScroll className="mb-16 max-w-2xl">
+          <AnimateOnScroll className="mb-16 max-w-2xl mx-auto text-center">
             <p className="section-label mb-3">What We Do</p>
             <h2 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
-              Commercial First, <span className="text-navy-500">Always.</span>
+              Built for Every Space.
             </h2>
-            <div className="w-16 h-0.5 bg-gold-500 mt-5" />
+            <div className="w-16 h-0.5 bg-gold-500 mt-5 mx-auto" />
             <p className="text-navy-600 mt-5 text-lg leading-relaxed">
-              We specialize in commercial spaces — offices, retail, warehouses, and
-              tenant improvements. Residential projects are available as a complement
-              to our commercial expertise.
+              From large-scale commercial builds and tenant improvements to residential
+              remodels — we bring the same dedication to quality to every project.
             </p>
           </AnimateOnScroll>
 
@@ -229,20 +228,13 @@ export default function HomePage() {
               <AnimateOnScroll key={title} variant="fade-up" delay={i * 100}>
                 <Link
                   href={href}
-                  className={`group service-card block p-8 h-full ${
-                    primary
-                      ? 'border-navy-700'
-                      : 'border-navy-800 opacity-80 hover:opacity-100'
-                  }`}
+                  className="group service-card block p-8 h-full border-navy-700"
                 >
-                  {primary && (
-                    <div className="absolute top-0 right-0 bg-gold-500 text-navy-900 text-[9px] font-bold tracking-widest uppercase px-2 py-1">
-                      Core
-                    </div>
-                  )}
-                  <div className={`mb-5 transition-colors duration-300 ${
-                    primary ? 'text-gold-500' : 'text-navy-400 group-hover:text-gold-500'
-                  }`}>
+                  <div className="absolute top-0 right-0 text-[9px] font-bold tracking-widest uppercase px-2 py-1"
+                    style={{ background: primary ? '#ffd936' : '#3d4f8a', color: primary ? '#090c1f' : '#fff' }}>
+                    {primary ? 'Commercial' : 'Residential'}
+                  </div>
+                  <div className="mb-5 text-gold-500 transition-colors duration-300">
                     {icon}
                   </div>
                   <h3 className="font-serif font-bold text-white text-xl mb-3">{title}</h3>
