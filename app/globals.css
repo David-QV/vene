@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-navy-900 font-sans;
+  }
+
+  ::selection {
+    background: #ffd936;
+    color: #090c1f;
+  }
+}
+
+/* ─── Custom scrollbar ──────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #090c1f; }
+::-webkit-scrollbar-thumb { background: #2d3b75; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #ffd936; }
+
+/* ─── Utility classes ───────────────────────────────────── */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  /* Section label above headings */
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.25em] uppercase text-gold-500;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent;
+  }
+
+  /* Gold underline accent after heading */
+  .heading-underline::after {
+    content: '';
+    @apply block w-16 h-0.5 bg-gold-500 mt-4;
+  }
+
+  /* Clip paths for diagonal section dividers */
+  .clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+  .clip-diagonal-top {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* Card hover glow */
+  .card-hover {
+    @apply transition-all duration-500;
+  }
+  .card-hover:hover {
+    @apply -translate-y-2 shadow-gold;
+  }
+
+  /* Gold shimmer button */
+  .btn-gold {
+    @apply relative overflow-hidden px-8 py-3.5 bg-gold-500 text-navy-900 font-bold text-sm tracking-wider uppercase
+           transition-all duration-300 hover:bg-gold-400 hover:shadow-gold active:scale-[0.98];
+  }
+
+  .btn-outline-white {
+    @apply px-8 py-3.5 border-2 border-white/60 text-white font-semibold text-sm tracking-wider uppercase
+           transition-all duration-300 hover:border-gold-500 hover:text-gold-500 active:scale-[0.98];
+  }
+
+  .btn-outline-navy {
+    @apply px-8 py-3.5 border-2 border-navy-500 text-navy-500 font-semibold text-sm tracking-wider uppercase
+           transition-all duration-300 hover:bg-navy-500 hover:text-white active:scale-[0.98];
+  }
+}
+
+/* ─── Scroll reveal animation classes ──────────────────── */
+/* Applied via JS IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ─── Image overlays ────────────────────────────────────── */
+.img-overlay::after {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/30 to-transparent;
+}
+
+/* ─── Section patterns ──────────────────────────────────── */
+.section-dark {
+  @apply bg-navy-900 text-white;
+}
+.section-light {
+  @apply bg-white text-navy-900;
+}
+.section-muted {
+  @apply bg-navy-50 text-navy-900;
+}
+
+/* ─── Hero parallax ─────────────────────────────────────── */
+.hero-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .hero-bg { background-attachment: scroll; }
+}
+
+/* ─── Navigation link underline animation ───────────────── */
+.nav-link {
+  @apply relative;
+}
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-[-2px] left-0 w-0 h-px bg-gold-500 transition-all duration-300;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  @apply w-full;
+}
+
+/* ─── Gold border card ──────────────────────────────────── */
+.service-card {
+  @apply relative bg-navy-900 border border-navy-700 overflow-hidden
+         transition-all duration-500 cursor-default;
+}
+.service-card::before {
+  content: '';
+  @apply absolute top-0 left-0 w-0 h-0.5 bg-gold-500 transition-all duration-500;
+}
+.service-card:hover::before {
+  @apply w-full;
+}
+.service-card:hover {
+  @apply border-navy-600 shadow-navy -translate-y-1;
+}
+
+/* ─── Project card overlay ──────────────────────────────── */
+.project-card .overlay {
+  @apply absolute inset-0 bg-navy-950/70 flex flex-col justify-end p-6
+         opacity-0 transition-opacity duration-400;
+}
+.project-card:hover .overlay {
+  @apply opacity-100;
+}
+.project-card img {
+  @apply transition-transform duration-700;
+}
+.project-card:hover img {
+  @apply scale-110;
+}
+
+/* ─── Input styles ──────────────────────────────────────── */
+.form-input {
+  @apply w-full bg-navy-800 border border-navy-600 text-white placeholder-navy-300
+         px-4 py-3 focus:outline-none focus:border-gold-500 transition-colors duration-300;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-navy-200 mb-2 tracking-wide;
+}
+
+/* ─── Counter number glow ───────────────────────────────── */
+.stat-number {
+  @apply font-serif font-bold text-gold-500;
+  text-shadow: 0 0 30px rgba(255, 217, 54, 0.4);
+}
