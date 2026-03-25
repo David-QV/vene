@@ -58,7 +58,7 @@ export function Footer() {
                 <p className="text-[10px] text-gold-500 tracking-[0.2em] uppercase">Construction</p>
               </div>
             </Link>
-            <p className="text-navy-300 text-sm leading-relaxed mb-6 max-w-xs">
+            <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs">
               Over a decade of commercial construction excellence in St. Louis, MO.
               Your project, our passion.
             </p>
@@ -68,8 +68,8 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-9 h-9 flex items-center justify-center border border-navy-600
-                           text-navy-400 hover:border-gold-500 hover:text-gold-500
+                className="w-9 h-9 flex items-center justify-center border border-white/30
+                           text-white/70 hover:border-gold-500 hover:text-gold-500
                            transition-colors duration-300"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-navy-300 text-sm hover:text-gold-500 transition-colors duration-200 flex items-center gap-2"
+                    className="text-white/80 text-sm hover:text-gold-500 transition-colors duration-200 flex items-center gap-2"
                   >
                     <span className="w-1 h-1 bg-gold-500 rounded-full shrink-0" />
                     {label}
@@ -109,7 +109,7 @@ export function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-navy-300 text-sm hover:text-gold-500 transition-colors duration-200 flex items-center gap-2"
+                    className="text-white/80 text-sm hover:text-gold-500 transition-colors duration-200 flex items-center gap-2"
                   >
                     <span className="w-1 h-1 bg-gold-500 rounded-full shrink-0" />
                     {label}
@@ -132,7 +132,7 @@ export function Footer() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <a href="tel:7854730596" className="text-navy-300 text-sm hover:text-gold-500 transition-colors duration-200">
+                <a href="tel:7854730596" className="text-white/80 text-sm hover:text-gold-500 transition-colors duration-200">
                   (785) 473-0596
                 </a>
               </li>
@@ -145,7 +145,7 @@ export function Footer() {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <span className="text-navy-300 text-sm">St. Louis, MO & Surrounding Areas</span>
+                <span className="text-white/80 text-sm">St. Louis, MO & Surrounding Areas</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="mt-0.5 text-gold-500 shrink-0">
@@ -154,7 +154,7 @@ export function Footer() {
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className="text-navy-300 text-sm">Mon–Fri: 7am – 6pm<br />Sat: 8am – 2pm</span>
+                <span className="text-white/80 text-sm">Mon–Fri: 7am – 6pm<br />Sat: 8am – 2pm</span>
               </li>
             </ul>
           </div>
@@ -165,10 +165,10 @@ export function Footer() {
       {/* ── Bottom bar ── */}
       <div className="border-t border-navy-800">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-navy-500 text-xs">
+          <p className="text-white/50 text-xs">
             © {new Date().getFullYear()} Vene Construction. All rights reserved.
           </p>
-          <p className="text-navy-500 text-xs">
+          <p className="text-white/50 text-xs">
             Licensed · Insured · St. Louis, MO & Surrounding Areas
           </p>
         </div>

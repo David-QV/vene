@@ -14,6 +14,10 @@
     @apply bg-white text-navy-900 font-sans;
   }
 
+  h1, h2, h3, h4 {
+    text-transform: uppercase;
+  }
+
   ::selection {
     background: #ffd936;
     color: #090c1f;
@@ -194,12 +198,13 @@
 
 /* ─── Input styles ──────────────────────────────────────── */
 .form-input {
-  @apply w-full bg-navy-800 border border-navy-600 text-white placeholder-navy-300
-         px-4 py-3 focus:outline-none focus:border-gold-500 transition-colors duration-300;
+  @apply w-full bg-navy-900 border border-white/50 text-white placeholder-white/40
+         px-4 py-3 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500/30
+         transition-colors duration-300;
 }
 
 .form-label {
-  @apply block text-sm font-medium text-navy-200 mb-2 tracking-wide;
+  @apply block text-sm font-semibold text-white/80 mb-2 tracking-wide uppercase;
 }
 
 /* ─── Counter number glow ───────────────────────────────── */

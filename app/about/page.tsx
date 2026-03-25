@@ -97,7 +97,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
             <AnimateOnScroll variant="fade-right">
-              <p className="section-label mb-3">Who We Are</p>
+              <p className="inline-block bg-gold-500 text-navy-900 text-xs font-bold tracking-widest uppercase px-3 py-1 mb-3">Who We Are</p>
               <h2 className="font-serif font-bold text-navy-900 text-4xl lg:text-5xl leading-tight mb-5">
                 More Than a Decade of Building Excellence
               </h2>
@@ -134,23 +134,20 @@ export default function AboutPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll variant="fade-left" className="relative">
-              <div className="relative h-[500px] overflow-hidden">
-                <Image
-                  src="/images/who-are-we_-1.png"
-                  alt="Who are we — Vene Construction"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-navy-950/10 to-transparent" />
-              </div>
+              <Image
+                src="/images/who-are-we_-1.png"
+                alt="Who are we — Vene Construction"
+                width={800}
+                height={800}
+                className="w-full h-auto"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               {/* Floating stat card */}
-              <div className="absolute -bottom-6 -left-6 bg-navy-900 border border-navy-700 p-6 shadow-navy">
+              <div className="hidden lg:block absolute -bottom-6 -left-6 bg-navy-900 border border-navy-700 p-6 shadow-navy">
                 <p className="font-serif font-bold text-gold-500 text-4xl">10+</p>
                 <p className="text-white text-sm mt-1">Years of Experience</p>
-                <p className="text-navy-400 text-xs mt-0.5">Serving St. Louis & Beyond</p>
+                <p className="text-white/70 text-xs mt-0.5">Serving St. Louis & Beyond</p>
               </div>
-              <div className="absolute -top-4 -right-4 w-2/3 h-2/3 border-2 border-gold-500/15 -z-10" />
             </AnimateOnScroll>
 
           </div>
@@ -171,7 +168,7 @@ export default function AboutPage() {
                 <div className="stat-number text-5xl lg:text-6xl">
                   <CounterAnimation end={end} suffix={suffix} />
                 </div>
-                <p className="text-navy-400 text-sm mt-2">{label}</p>
+                <p className="text-white/70 text-sm mt-2">{label}</p>
               </AnimateOnScroll>
             ))}
           </div>
@@ -182,7 +179,7 @@ export default function AboutPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <AnimateOnScroll className="text-center mb-16 max-w-2xl mx-auto">
-            <p className="section-label mb-3">What Drives Us</p>
+            <p className="inline-block bg-gold-500 text-navy-900 text-xs font-bold tracking-widest uppercase px-3 py-1 mb-3">What Drives Us</p>
             <h2 className="font-serif font-bold text-navy-900 text-4xl lg:text-5xl">
               Our Core Values
             </h2>
@@ -193,11 +190,11 @@ export default function AboutPage() {
             </p>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:grid-rows-2">
             {values.map(({ icon, title, desc }, i) => (
-              <AnimateOnScroll key={title} variant="fade-up" delay={i * 100}>
+              <AnimateOnScroll key={title} variant="fade-up" delay={i * 100} className="h-full">
                 <div className="flex gap-6 p-8 border border-navy-100 hover:border-gold-500/50
-                                hover:shadow-gold-sm transition-all duration-400 group">
+                                hover:shadow-gold-sm transition-all duration-400 group h-full">
                   <div className="text-gold-500 shrink-0 mt-1 transition-transform duration-300 group-hover:scale-110">
                     {icon}
                   </div>
@@ -222,13 +219,13 @@ export default function AboutPage() {
                 Skilled Crews. <span className="text-gold-500">Trusted Results.</span>
               </h2>
               <div className="w-16 h-0.5 bg-gold-500 mb-7" />
-              <p className="text-navy-300 leading-relaxed mb-6">
+              <p className="text-white/80 leading-relaxed mb-6">
                 Our team is our greatest asset. Every crew member is carefully vetted, fully
                 trained, and deeply committed to the quality standards that define Vene
                 Construction. We invest in our people so that every client gets the absolute
                 best on every project.
               </p>
-              <p className="text-navy-300 leading-relaxed mb-10">
+              <p className="text-white/80 leading-relaxed mb-10">
                 From project managers and estimators to lead carpenters and drywall specialists,
                 we bring together the right people for every job. That's what makes the difference
                 between a construction company and a true construction partner.
@@ -274,7 +271,7 @@ export default function AboutPage() {
               </Link>
               <Link
                 href="/projects"
-                className="px-10 py-4 border-2 border-navy-900 text-navy-900 font-bold text-sm tracking-widest uppercase hover:bg-navy-900 hover:text-white transition-all duration-300"
+                className="px-10 py-4 bg-white border-2 border-navy-900 text-navy-900 font-bold text-sm tracking-widest uppercase hover:bg-navy-50 transition-all duration-300"
               >
                 View Our Work
               </Link>

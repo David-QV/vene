@@ -35,8 +35,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
-        sans:  ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-raleway)', 'sans-serif'],
+        sans:  ['var(--font-raleway)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

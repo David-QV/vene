@@ -106,7 +106,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-1">Phone</p>
+                      <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-1">Phone</p>
                       <a href="tel:7854730596" className="text-white text-lg font-semibold hover:text-gold-500 transition-colors duration-200">
                         (785) 473-0596
                       </a>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-1">Website</p>
+                      <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-1">Website</p>
                       <a href="https://veneconstruction.com" target="_blank" rel="noopener noreferrer"
                         className="text-white font-semibold hover:text-gold-500 transition-colors duration-200">
                         veneconstruction.com
@@ -139,9 +139,9 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-1">Service Area</p>
+                      <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-1">Service Area</p>
                       <p className="text-white font-semibold">St. Louis &amp; Surrounding Areas</p>
-                      <p className="text-navy-400 text-sm">Topeka, Lawrence, Wichita, KC &amp; more</p>
+                      <p className="text-white/70 text-sm">Topeka, Lawrence, Wichita, KC &amp; more</p>
                     </div>
                   </li>
 
@@ -153,16 +153,16 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-1">Business Hours</p>
+                      <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-1">Business Hours</p>
                       <p className="text-white font-semibold">Mon – Fri: 7:00am – 6:00pm</p>
-                      <p className="text-navy-400 text-sm">Saturday: 8:00am – 2:00pm</p>
+                      <p className="text-white/70 text-sm">Saturday: 8:00am – 2:00pm</p>
                     </div>
                   </li>
                 </ul>
 
                 {/* Social */}
                 <div>
-                  <p className="text-navy-400 text-xs font-semibold tracking-widest uppercase mb-4">Follow Us</p>
+                  <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-4">Follow Us</p>
                   <a
                     href="https://www.instagram.com/veneconstruction/"
                     target="_blank"
@@ -181,7 +181,7 @@ export default function ContactPage() {
 
             {/* ── Form ── */}
             <AnimateOnScroll variant="fade-left" className="lg:col-span-3">
-              <div className="bg-navy-900 border border-navy-700 p-8 lg:p-10">
+              <div className="bg-navy-950 border border-gold-500 p-8 lg:p-10">
                 {submitted ? (
                   <div className="text-center py-12">
                     <div className="w-16 h-16 bg-gold-500/10 border-2 border-gold-500 mx-auto mb-6 flex items-center justify-center">
@@ -190,7 +190,7 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <h3 className="font-serif font-bold text-white text-3xl mb-3">Message Sent!</h3>
-                    <p className="text-navy-300 mb-8 max-w-sm mx-auto">
+                    <p className="text-white/80 mb-8 max-w-sm mx-auto">
                       Thank you for reaching out. We'll review your project details and
                       get back to you within one business day.
                     </p>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <h2 className="font-serif font-bold text-white text-2xl mb-2">Request a Free Quote</h2>
-                    <p className="text-navy-400 text-sm mb-8">
+                    <p className="text-white/70 text-sm mb-8">
                       Tell us about your project and we'll get back to you within one business day.
                     </p>
 
@@ -311,7 +311,7 @@ export default function ContactPage() {
                         {loading ? 'Sending…' : 'Send My Request'}
                       </button>
 
-                      <p className="text-navy-500 text-xs text-center">
+                      <p className="text-white/50 text-xs text-center">
                         By submitting this form you agree to be contacted regarding your project.
                         We respect your privacy and never share your information.
                       </p>
@@ -326,33 +326,27 @@ export default function ContactPage() {
       </section>
 
       {/* ══════════ MAP PLACEHOLDER ══════════ */}
-      <section className="bg-navy-900 border-t border-navy-800">
-        <div className="max-w-7xl mx-auto px-6 py-16">
+      <section className="relative border-t border-navy-800 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.pexels.com/photos/12771407/pexels-photo-12771407.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+            alt="Commercial construction interior"
+            fill
+            className="object-cover opacity-80"
+          />
+          <div className="absolute inset-0 bg-navy-800/70" />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
           <AnimateOnScroll className="text-center mb-10">
-            <p className="section-label mb-2">Coverage Area</p>
-            <h2 className="font-serif font-bold text-white text-3xl">We Serve All of St. Louis &amp; Beyond</h2>
+            <p className="section-label mb-2" style={{textShadow:'0 2px 12px #000, 0 4px 24px #000'}}>Coverage Area</p>
+            <h2 className="font-serif font-bold text-white text-3xl" style={{textShadow:'0 2px 12px #000, 0 4px 24px #000'}}>We Serve All of St. Louis &amp; Beyond</h2>
           </AnimateOnScroll>
-          <AnimateOnScroll>
-            <div className="relative h-72 overflow-hidden border border-navy-700">
-              <Image
-                src="https://images.pexels.com/photos/12771407/pexels-photo-12771407.jpeg?auto=compress&cs=tinysrgb&w=1600&q=70"
-                alt="Commercial construction interior"
-                fill
-                className="object-cover opacity-30"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-gold-500 font-serif font-bold text-2xl mb-2">St. Louis &amp; Surrounding Areas</p>
-                  <p className="text-navy-300 text-sm">St. Louis · Clayton · Chesterfield · St. Charles · And beyond</p>
-                  <a
-                    href="tel:7854730596"
-                    className="inline-block mt-6 btn-gold"
-                  >
-                    Call to Confirm Your Area
-                  </a>
-                </div>
-              </div>
-            </div>
+          <AnimateOnScroll className="text-center">
+            <p className="text-gold-500 font-serif font-bold text-2xl mb-2" style={{textShadow:'0 2px 12px #000, 0 4px 24px #000'}}>St. Louis &amp; Surrounding Areas</p>
+            <p className="text-white/80 text-sm mb-8" style={{textShadow:'0 2px 12px #000, 0 4px 24px #000'}}>St. Louis · Clayton · Chesterfield · St. Charles · And beyond</p>
+            <a href="tel:7854730596" className="inline-block btn-gold">
+              Call to Confirm Your Area
+            </a>
           </AnimateOnScroll>
         </div>
       </section>

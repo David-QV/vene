@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(magick \"who-are-we_-1.png\" -background white -flatten \"who-are-we_-1.png\")",
+      "Bash(python3 -c \":*)",
+      "Bash(\"/c/Users/david/AppData/Local/Programs/Python/Python313/python.exe\" -c \":*)"
+    ]
+  }
+}

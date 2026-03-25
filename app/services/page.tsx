@@ -158,7 +158,10 @@ export default function ServicesPage() {
 
               {/* Text */}
               <AnimateOnScroll variant={flip ? 'fade-left' : 'fade-right'} className={flip ? 'lg:order-1' : ''}>
-                <p className="section-label mb-3">{badge}</p>
+                {flip
+                  ? <p className="section-label mb-3">{badge}</p>
+                  : <p className="inline-block bg-gold-500 text-navy-900 text-xs font-bold tracking-widest uppercase px-3 py-1 mb-3">{badge}</p>
+                }
                 <h2 className={`font-serif font-bold text-4xl lg:text-5xl leading-tight mb-2 ${
                   flip ? 'text-white' : 'text-navy-900'
                 }`}>
@@ -166,7 +169,7 @@ export default function ServicesPage() {
                 </h2>
                 <p className={`text-lg mb-5 ${flip ? 'text-gold-500' : 'text-navy-500'}`}>{subtitle}</p>
                 <div className={`w-16 h-0.5 bg-gold-500 mb-7`} />
-                <p className={`leading-relaxed mb-8 ${flip ? 'text-navy-300' : 'text-navy-600'}`}>
+                <p className={`leading-relaxed mb-8 ${flip ? 'text-white/80' : 'text-navy-600'}`}>
                   {description}
                 </p>
                 <ul className="space-y-3 mb-8">
@@ -175,7 +178,7 @@ export default function ServicesPage() {
                       <svg className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className={`text-sm ${flip ? 'text-navy-300' : 'text-navy-700'}`}>{b}</span>
+                      <span className={`text-sm ${flip ? 'text-white/80' : 'text-navy-700'}`}>{b}</span>
                     </li>
                   ))}
                 </ul>
@@ -215,7 +218,7 @@ export default function ServicesPage() {
               </h2>
               <p className="text-gold-500 text-lg mb-5">Home construction & remodeling</p>
               <div className="w-16 h-0.5 bg-gold-500 mb-7" />
-              <p className="text-navy-300 leading-relaxed mb-6">
+              <p className="text-white/80 leading-relaxed mb-6">
                 While our primary focus is commercial work, we bring the same level of
                 quality and care to residential projects. From new home builds to kitchen
                 remodels, Vene Construction delivers the same excellence at every scale.
@@ -226,7 +229,7 @@ export default function ServicesPage() {
                     <svg className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-navy-300 text-sm">{b}</span>
+                    <span className="text-white/80 text-sm">{b}</span>
                   </li>
                 ))}
               </ul>
@@ -242,7 +245,7 @@ export default function ServicesPage() {
       <section className="bg-white py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <AnimateOnScroll className="text-center mb-16">
-            <p className="section-label mb-3">How We Work</p>
+            <p className="inline-block bg-gold-500 text-navy-900 text-xs font-bold tracking-widest uppercase px-3 py-1 mb-3">How We Work</p>
             <h2 className="font-serif text-4xl lg:text-5xl font-bold text-navy-900">
               Our Process
             </h2>

@@ -138,7 +138,7 @@ export default function ProjectsPage() {
                 className={`px-5 py-2.5 text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
                   active === cat
                     ? 'bg-gold-500 text-navy-900'
-                    : 'border border-navy-600 text-navy-300 hover:border-gold-500 hover:text-gold-500'
+                    : 'border border-white text-white/80 hover:border-gold-500 hover:text-gold-500'
                 }`}
               >
                 {cat}
@@ -147,7 +147,7 @@ export default function ProjectsPage() {
           </AnimateOnScroll>
 
           {/* Masonry-style grid */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-1 sm:gap-5 space-y-1 sm:space-y-5 -mx-6 sm:mx-0">
             {filtered.map((p, i) => (
               <AnimateOnScroll
                 key={p.id}
@@ -172,7 +172,7 @@ export default function ProjectsPage() {
                         {p.category}
                       </span>
                       <h3 className="font-serif font-bold text-white text-xl mb-1">{p.title}</h3>
-                      <p className="text-navy-300 text-sm flex items-center gap-1.5">
+                      <p className="text-white/80 text-sm flex items-center gap-1.5">
                         <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                             d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -204,7 +204,7 @@ export default function ProjectsPage() {
             <h2 className="font-serif font-bold text-white text-4xl mb-5">
               Ready to Add Your Project to This Portfolio?
             </h2>
-            <p className="text-navy-300 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
               Contact us today for a free consultation and let's discuss how we can
               bring your vision to life.
             </p>
